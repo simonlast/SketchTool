@@ -1,0 +1,138 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Sketchtool by simonlast</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Sketchtool</h1>
+        <p>Hassle-free and configurable sketching in the browser.</p>
+
+        <p class="view"><a href="https://github.com/simonlast/SketchTool">View the Project on GitHub <small>simonlast/SketchTool</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/simonlast/SketchTool/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/simonlast/SketchTool/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/simonlast/SketchTool">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <p><img src="https://github.com/simonlast/SketchTool/blob/master/sketch.png?raw=true" alt="SketchTool"></p>
+
+<h1>SketchTool.js</h1>
+
+<h3>Hassle-free and configurable sketching in the browser.</h3>
+
+<h2>Quick Start</h2>
+
+<ol>
+<li>Load processing.js</li>
+<li>
+<p>Create your canvas</p>
+
+<pre><code>&lt;canvas id="myCanvas"&gt;&lt;/canvas&gt;
+</code></pre>
+</li>
+<li><p>Load sketch.js</p></li>
+<li>
+<p>Make a SketchTool!</p>
+
+<pre><code>var sketch = SketchTool.create("myCanvas");
+</code></pre>
+</li>
+</ol><h2>Documentation</h2>
+
+<h3>Configuration</h3>
+
+<p>You can optionally pass SketchTool.create a configuration object, which may contain any of the following:</p>
+
+<pre><code>    options = {
+        width: 800,
+        height: 600,
+        radius: 20,
+        color: {
+            r: 60,
+            g: 60,
+            b: 60
+        }
+    };
+</code></pre>
+
+<p>You can pass it like this:</p>
+
+<pre><code>    var sketch = SketchTool.create("myCanvas", options);
+</code></pre>
+
+<h3>sketch.reset</h3>
+
+<p>Call sketch.reset to reset the canvas and its data.</p>
+
+<h3>sketch.changeColor</h3>
+
+<p>Pass a color to sketch.changeColor to change the color of the strokes</p>
+
+<pre><code>    sketch.changeColor(red, green, blue);
+</code></pre>
+
+<h3>sketch.changeRadius</h3>
+
+<pre><code>    sketch.changeColor(radius);
+</code></pre>
+
+<h3>sketch.getData</h3>
+
+<p>This function will return a JS object containing the image data, in this format:</p>
+
+<pre><code>    {
+        points: [
+            {x: Number, y:Number},
+            {x: Number, y:Number},
+            ...
+        ],
+        color: {
+            r: Number,
+            g: Number,
+            b: Number
+        },
+        radius: Number
+    }
+</code></pre>
+
+<h3>sketch.getPNG</h3>
+
+<p>This function will return a PNG data URL</p>
+
+<h3>CSS</h3>
+
+<p>In order for the canvas to not be outlined on selection, these CSS rules are recommended:</p>
+
+<pre><code>    outline: none;
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0); /* mobile webkit */
+</code></pre>
+
+<h2>TODO</h2>
+
+<ul>
+<li>Make a default color/radius picker</li>
+</ul>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/simonlast">simonlast</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
