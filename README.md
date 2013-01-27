@@ -1,4 +1,4 @@
-![SketchTool](sketch.png)
+![SketchTool](https://github.com/simonlast/SketchTool/blob/master/sketch.png?raw=true)
 
 #SketchTool.js
 
