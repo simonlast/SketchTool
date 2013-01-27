@@ -14,6 +14,9 @@
 3. Make a SketchTool!
 
 		var sketch = SketchTool.create("myCanvas");
+		
+###Or run my example:
+		sudo node server.js
 	
 	
 ##Documentation
